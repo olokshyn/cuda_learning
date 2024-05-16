@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build debug",
+			"type": "shell",
+			"command": "nvcc -g -G --cudart shared -o ${fileDirname}/${fileBasenameNoExtension}.run ${file}",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+		}
+	]
+}
