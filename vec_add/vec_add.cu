@@ -1,14 +1,4 @@
-#include <cstdio>
-
-#define CUDA_CHECK(call)                                                                  \
-    {                                                                                     \
-        cudaError_t err = (call);                                                         \
-        if (err != cudaSuccess)                                                           \
-        {                                                                                 \
-            printf("%s in %s at line %d\n", cudaGetErrorString(err), __FILE__, __LINE__); \
-            exit(EXIT_FAILURE);                                                           \
-        }                                                                                 \
-    }
+#include "../common.h"
 
 __global__ void vec_add_kernel(const float *A, const float *B, float *C, int n)
 {
@@ -61,6 +51,8 @@ int main()
     }
 
     vec_add(A, B, C, n);
+
+    printf("Success\n");
 
     free(A);
     free(B);

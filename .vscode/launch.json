@@ -9,6 +9,7 @@
             "type": "cuda-gdb",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}.run",
+            "cwd": "${fileDirname}",
             "preLaunchTask": "Build debug"
         },
         {

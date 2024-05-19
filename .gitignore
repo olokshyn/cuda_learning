@@ -6,3 +6,5 @@
 *.ptx
 *.cubin
 *.fatbin
+
+color_to_grayscale/output.jpg
